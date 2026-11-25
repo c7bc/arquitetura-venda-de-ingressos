@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1000" viewBox="0 0 1440 1000" role="img" aria-labelledby="title desc">
+<title id="title">Arquitetura de venda de ingressos em alta demanda</title><desc id="desc">A sala de espera mantém a ordem de chegada. O checkout reserva o estoque no banco. Pagamento aprovado com reserva válida confirma o pedido e permite emitir o ingresso.</desc>
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1" gradientUnits="objectBoundingBox"><stop stop-color="#101e2b"/><stop offset="1" stop-color="#0a111b"/></linearGradient><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M1 1L7 4L1 7" fill="none" stroke="#86adc4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<g font-family="DejaVu Sans, sans-serif">
+<rect x="0" y="0" width="1440" height="1000" rx="0" fill="url(#bg)" stroke="none"/>
+<text x="49" y="53" font-size="13" font-weight="700" fill="#8be8c6">ARQUITETURA DE SISTEMA</text>
+<text x="46" y="107" font-size="42" font-weight="700" fill="#f3f7fb">Venda de ingressos em alta demanda</text>
+<text x="49" y="142" font-size="17" font-weight="400" fill="#b6c7d8">Da ordem de chegada à emissão, com controle de admissão e reserva de estoque.</text>
+<rect x="45" y="172" width="1350" height="217" rx="14" fill="#111e2e" stroke="#2b4158"/>
+<rect x="68" y="193" width="28" height="24" rx="7" fill="#234637" stroke="none"/>
+<text x="74" y="210" font-size="12" font-weight="700" fill="#a3efd5">01</text>
+<text x="106" y="212" font-size="18" font-weight="700" fill="#eef4fa">Fila e admissão</text>
+<text x="74" y="237" font-size="13" font-weight="400" fill="#b6c5d5">A maior parte do tráfego fica fora do checkout.</text>
+<rect x="74" y="251" width="245" height="115" rx="14" fill="#162437" stroke="#334963"/>
+<text x="92" y="275" font-size="12" font-weight="700" fill="#79e6c1">PÚBLICO</text>
+<text x="92" y="304" font-size="19" font-weight="700" fill="#f0f5fa">Navegador</text>
+<text x="92" y="328" font-size="14" font-weight="400" fill="#b6c5d5">Entra na fila e consulta</text>
+<text x="92" y="348" font-size="14" font-weight="400" fill="#b6c5d5">a posição com o token.</text>
+<rect x="382" y="251" width="245" height="115" rx="14" fill="#162437" stroke="#334963"/>
+<text x="400" y="275" font-size="12" font-weight="700" fill="#79e6c1">BORDA</text>
+<text x="400" y="304" font-size="19" font-weight="700" fill="#f0f5fa">CDN e proteção</text>
+<text x="400" y="328" font-size="14" font-weight="400" fill="#b6c5d5">Entrega conteúdo estático</text>
+<text x="400" y="348" font-size="14" font-weight="400" fill="#b6c5d5">e limita abuso e rajadas.</text>
+<rect x="690" y="251" width="275" height="115" rx="14" fill="#162437" stroke="#334963"/>
+<text x="708" y="275" font-size="12" font-weight="700" fill="#79e6c1">ORDEM</text>
+<text x="708" y="304" font-size="19" font-weight="700" fill="#f0f5fa">Sala de espera</text>
+<text x="708" y="328" font-size="14" font-weight="400" fill="#b6c5d5">Numera chegadas por evento</text>
+<text x="708" y="348" font-size="14" font-weight="400" fill="#b6c5d5">e mantém a posição ao voltar.</text>
+<rect x="1028" y="251" width="340" height="115" rx="14" fill="#162437" stroke="#334963"/>
+<text x="1046" y="275" font-size="12" font-weight="700" fill="#79e6c1">CAPACIDADE</text>
+<text x="1046" y="304" font-size="19" font-weight="700" fill="#f0f5fa">Controlador de admissão</text>
+<text x="1046" y="328" font-size="14" font-weight="400" fill="#b6c5d5">Libera vagas pela ordem da fila</text>
+<text x="1046" y="348" font-size="14" font-weight="400" fill="#b6c5d5">conforme capacidade e estoque.</text>
+<path d="M319 310 H382" fill="none" stroke="#6c889e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M627 310 H690" fill="none" stroke="#6c889e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M965 310 H1028" fill="none" stroke="#6c889e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="45" y="421" width="1350" height="217" rx="14" fill="#111e2e" stroke="#2b4158"/>
+<rect x="68" y="442" width="28" height="24" rx="7" fill="#234637" stroke="none"/>
+<text x="74" y="459" font-size="12" font-weight="700" fill="#a3efd5">02</text>
+<text x="106" y="461" font-size="18" font-weight="700" fill="#eef4fa">Checkout e estoque</text>
+<text x="74" y="486" font-size="13" font-weight="400" fill="#b6c5d5">A reserva bloqueia o ingresso antes do pagamento.</text>
+<rect x="74" y="500" width="305" height="115" rx="14" fill="#162437" stroke="#334963"/>
+<text x="92" y="524" font-size="12" font-weight="700" fill="#79e6c1">API</text>
+<text x="92" y="553" font-size="19" font-weight="700" fill="#f0f5fa">Checkout</text>
+<text x="92" y="577" font-size="14" font-weight="400" fill="#b6c5d5">Resgata a admissão uma vez</text>
+<text x="92" y="597" font-size="14" font-weight="400" fill="#b6c5d5">e solicita a reserva.</text>
+<rect x="442" y="500" width="373" height="115" rx="14" fill="#162437" stroke="#334963"/>
+<text x="460" y="524" font-size="12" font-weight="700" fill="#79e6c1">ESTOQUE · PEDIDOS · OUTBOX</text>
+<text x="460" y="553" font-size="19" font-weight="700" fill="#f0f5fa">PostgreSQL</text>
+<text x="460" y="577" font-size="14" font-weight="400" fill="#b6c5d5">Decrementa saldo e cria a reserva</text>
+<text x="460" y="597" font-size="14" font-weight="400" fill="#b6c5d5">com prazo, na mesma transação.</text>
+<rect x="878" y="500" width="490" height="115" rx="14" fill="#162437" stroke="#334963"/>
+<text x="896" y="524" font-size="12" font-weight="700" fill="#ffd48c">VALIDADE</text>
+<text x="896" y="553" font-size="19" font-weight="700" fill="#f0f5fa">Expiração de reservas</text>
+<text x="896" y="577" font-size="14" font-weight="400" fill="#b6c5d5">Devolve saldo uma vez se o prazo vencer.</text>
+<text x="896" y="597" font-size="14" font-weight="400" fill="#b6c5d5">Disputa a transição com a confirmação do pagamento.</text>
+<path d="M379 558 H442" fill="none" stroke="#6c889e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M878 558 H815" fill="none" stroke="#6c889e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M1198 366 V402 H59 V550 H74" fill="none" stroke="#6c889e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="78" y="398" font-size="12" font-weight="500" fill="#b7c9da">admissão assinada</text>
+<rect x="45" y="672" width="1350" height="217" rx="14" fill="#111e2e" stroke="#2b4158"/>
+<rect x="68" y="693" width="28" height="24" rx="7" fill="#234637" stroke="none"/>
+<text x="74" y="710" font-size="12" font-weight="700" fill="#a3efd5">03</text>
+<text x="106" y="712" font-size="18" font-weight="700" fill="#eef4fa">Pagamento e entrega</text>
+<text x="74" y="737" font-size="13" font-weight="400" fill="#b6c5d5">A emissão ocorre após a confirmação do pedido.</text>
+<rect x="74" y="751" width="305" height="115" rx="14" fill="#162437" stroke="#334963"/>
+<text x="92" y="775" font-size="12" font-weight="700" fill="#79e6c1">PAGAMENTO</text>
+<text x="92" y="804" font-size="19" font-weight="700" fill="#f0f5fa">Provedor de pagamento</text>
+<text x="92" y="828" font-size="14" font-weight="400" fill="#b6c5d5">Processa com chave idempotente</text>
+<text x="92" y="848" font-size="14" font-weight="400" fill="#b6c5d5">vinculada à reserva.</text>
+<rect x="442" y="751" width="373" height="115" rx="14" fill="#162437" stroke="#334963"/>
+<text x="460" y="775" font-size="12" font-weight="700" fill="#79e6c1">CONFIRMAÇÃO</text>
+<text x="460" y="804" font-size="19" font-weight="700" fill="#f0f5fa">Consumidor de webhooks</text>
+<text x="460" y="828" font-size="14" font-weight="400" fill="#b6c5d5">Deduplica o evento e confirma</text>
+<text x="460" y="848" font-size="14" font-weight="400" fill="#b6c5d5">só com reserva válida.</text>
+<rect x="878" y="751" width="490" height="115" rx="14" fill="#162437" stroke="#334963"/>
+<text x="896" y="775" font-size="12" font-weight="700" fill="#79e6c1">ENTREGA</text>
+<text x="896" y="804" font-size="19" font-weight="700" fill="#f0f5fa">Processo de emissão</text>
+<text x="896" y="828" font-size="14" font-weight="400" fill="#b6c5d5">Consome o outbox, gera um ingresso por item</text>
+<text x="896" y="848" font-size="14" font-weight="400" fill="#b6c5d5">e retenta a entrega se necessário.</text>
+<path d="M74 583 H59 V803 H74" fill="none" stroke="#6c889e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="78" y="659" font-size="12" font-weight="500" fill="#b7c9da">iniciar pagamento</text>
+<path d="M379 809 H442" fill="none" stroke="#6c889e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M627 751 V615" fill="none" stroke="#6c889e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="640" y="658" font-size="12" font-weight="500" fill="#b7c9da">confirma + evento</text>
+<path d="M815 584 H846 V721 H1110 V751" fill="none" stroke="#6c889e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)" stroke-dasharray="6 5"/>
+<text x="950" y="714" font-size="12" font-weight="500" fill="#b7c9da">emissão pendente no outbox</text>
+<rect x="45" y="917" width="1350" height="45" rx="12" fill="#153028" stroke="#34594c"/>
+<text x="69" y="945" font-size="12" font-weight="700" fill="#9aefd0">REGRAS DE CONSISTÊNCIA</text>
+<text x="300" y="945" font-size="14" font-weight="600" fill="#dbeee9">Ordem registrada no servidor</text>
+<text x="620" y="945" font-size="14" font-weight="600" fill="#dbeee9">Estoque limitado por transação</text>
+<text x="977" y="945" font-size="14" font-weight="600" fill="#dbeee9">Emissão idempotente por item</text>
+</g></svg>
