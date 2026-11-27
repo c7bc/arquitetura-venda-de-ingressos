@@ -1,12 +1,12 @@
 # Venda de ingressos em alta demanda
 
-**Uma fila de entrada justa, estoque consistente e um checkout que continua funcionando sob pressão.**
+Proposta de arquitetura para distribuir acesso ao checkout por ordem de chegada, reservar estoque com consistência e retomar emissões interrompidas.
 
-Proposta de arquitetura para a abertura de vendas de um grande evento, quando a procura supera a quantidade de ingressos. A sala de espera controla quantas pessoas chegam ao checkout, e o banco confirma cada reserva antes de aceitar o pagamento.
+![Diagrama da proposta de arquitetura disponível no repositório.](docs/preview.webp)
 
-![Diagrama da arquitetura de venda de ingressos, da sala de espera à emissão](docs/arquitetura.png)
+<sub>Diagrama da proposta de arquitetura disponível no repositório.</sub>
 
-[Abrir PNG em tamanho completo](docs/arquitetura.png) · [Abrir versão vetorial](docs/arquitetura.svg)
+[Diagrama completo em PNG](docs/arquitetura.png) · [Versão SVG](docs/arquitetura.svg)
 
 ## Da fila ao ingresso
 
